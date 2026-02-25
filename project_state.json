@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "A website for trading Roblox accounts for Brainrot content.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Bold meme-style banner logo with the text 'Brainrot Trade Hub' in chunky neon letters on a dark background with pixel/glitch art accents (banner-logo.dim_1200x300.png)\n- Small cartoon brain character icon with sunglasses, vibrant colors, meme aesthetic (brainrot-icon.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-that-displays-active-trade-listings-each-showing-a-roblox-account-offer-username-level-inventory-highlights-in-exchange-for-brainrot-content-items-or-vice-versa",
+      "title": "Create a homepage that displays active trade listings, each showing a Roblox account offer (username, level, inventory highlights) in exchange for Brainrot content items or vice versa.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-post-a-trade-form-on-the-frontend-allowing-users-to-submit-a-new-listing-by-entering-their-display-name-what-they-are-offering-roblox-account-info-or-brainrot-item-description-and-what-they-want-in-return",
+      "title": "Add a 'Post a Trade' form on the frontend allowing users to submit a new listing by entering their display name, what they are offering (Roblox account info or Brainrot item description), and what they want in return.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-listing-detail-view-where-users-can-see-the-full-details-of-a-trade-listing-and-mark-it-as-closed-completed",
+      "title": "Add a listing detail view where users can see the full details of a trade listing and mark it as closed/completed.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-bold-energetic-visual-theme-inspired-by-internet-meme-and-gaming-culture-bright-accent-colors-e-g-neon-green-or-vivid-orange-chunky-typography-dark-background-and-card-based-layout-apply-this-style-consistently-across-all-pages-and-components",
+      "title": "Apply a bold, energetic visual theme inspired by internet meme and gaming culture — bright accent colors (e.g., neon green or vivid orange), chunky typography, dark background, and card-based layout. Apply this style consistently across all pages and components.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Roblox account trading platform where users can trade accounts for Brainrot content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement a backend data model and API for trade listings. Each listing must store: listing ID, poster display name, offered item type (Roblox account or Brainrot item), offered item description, requested item type, requested item description, status (open/closed), and creation timestamp.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Roblox Account Trading Website",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,15 @@
+{
+  "frontend/src/App.tsx": "Main app component that sets up TanStack Router with routes for home (/), post trade (/post-trade), and listing detail (/listing/$id), wrapped in a root layout with Toaster.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations: fetching active/all listings, getting listing details, creating listings, and closing listings with proper cache invalidation.",
+  "frontend/src/components/Layout.tsx": "Wrapper layout component that composes Navigation and Footer around page content with consistent max-width container.",
+  "frontend/src/components/Navigation.tsx": "Sticky header navigation with brainrot icon logo, site title, and links to home and post-trade pages with active state styling.",
+  "frontend/src/components/Footer.tsx": "Footer with branding, dynamic year, and caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/components/TradeListingCard.tsx": "Clickable card component displaying a trade listing with offered/requested item details, poster name, timestamp, and open/closed status badge.",
+  "frontend/src/components/ItemTypeSelector.tsx": "Form component for selecting and filling in either a Roblox Account (username, level, inventory) or Brainrot Item (description) with toggle buttons and conditional fields.",
+  "frontend/src/pages/HomePage.tsx": "Homepage with hero banner, stats bar, and tabbed listings grid showing active and all trades with loading skeletons and empty states.",
+  "frontend/src/pages/PostTradePage.tsx": "Form page for creating new trade listings with display name, offered item, and requested item fields, validation, and backend submission.",
+  "frontend/src/pages/ListingDetailPage.tsx": "Detail page for a single trade listing showing full item info, poster details, timestamp, and a button to mark the trade as completed.",
+  "frontend/src/index.css": "Global styles with OKLCH color system for light/dark modes, Nunito font import, and custom neon/orange design tokens for the gaming/meme theme.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Nunito font family, custom neon/orange/surface color tokens, neon glow box shadows, and standard shadcn/ui theme extensions.",
+  "frontend/index.html": "HTML entry point with updated title \"Brainrot Trade Hub\" and brainrot icon as favicon."
+}

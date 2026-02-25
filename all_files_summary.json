@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko actor defining the trade listing backend with types for Roblox accounts and brainrot items, and methods to create, retrieve, and close listings stored in a map.",
+  "feature_evidence.json": "Feature evidence report mapping four product features (homepage listings, post-trade form, listing detail view, visual theme) to their implementing frontend files and test IDs.",
+  "frontend-file-summaries.txt": "JSON document providing one-sentence summaries of each frontend source file, serving as a reference for the project's frontend structure.",
+  "frontend/index.css": "Global CSS with Tailwind directives and OKLCH-based design tokens for light and dark modes, defining color variables for backgrounds, borders, and UI components.",
+  "frontend/index.html": "HTML entry point titled 'Brainrot Trade Hub' with a brainrot icon favicon and a root div for the React app.",
+  "frontend/src/App.tsx": "Root React component that configures TanStack Router with routes for home, post-trade, and listing detail pages, all wrapped in a shared Layout with a Toaster.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying the site brand, copyright year, and a caffeine.ai attribution link with UTM tracking.",
+  "frontend/src/components/ItemTypeSelector.tsx": "Form component that lets users toggle between a Roblox Account (username, level, inventory) and a Brainrot Item (description), rendering conditional input fields for each type.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper that composes Navigation and Footer around a centered main content area with consistent max-width and padding.",
+  "frontend/src/components/Navigation.tsx": "Sticky header with the site logo, a link to the listings home page, and a 'Post Trade' button with active-state styling based on the current route.",
+  "frontend/src/components/TradeListingCard.tsx": "A card component that displays a trade listing summary, showing the offered and requested items (Roblox account or brainrot item), poster name, creation date, and open/closed status with a link to the detail page.",
+  "frontend/src/hooks/useActor.ts": "A React hook that creates and caches an ICP backend actor (authenticated or anonymous) using TanStack Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an Internet Identity authentication context and provider, exposing login/logout functions, identity state, and login status via a React context backed by the DFINITY AuthClient.",
+  "frontend/src/hooks/useQueries.ts": "Defines TanStack Query hooks for fetching active listings, all listings, and listing details, plus mutations for creating and closing trade listings against the backend actor.",
+  "frontend/src/index.css": "Global CSS file that imports Nunito font, sets up Tailwind directives, and defines light and dark mode CSS custom properties for the design system including neon and orange accent tokens.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrappers around the root App component.",
+  "frontend/src/pages/HomePage.tsx": "The home page displaying a hero banner, stats bar (active/completed trade counts), and a tabbed grid of trade listing cards with loading skeletons, plus a link to post a new trade.",
+  "frontend/src/pages/ListingDetailPage.tsx": "A detail page for a single trade listing that shows full item information for both offered and requested items, creation timestamp, status badge, and a button to close/complete the listing.",
+  "frontend/src/pages/PostTradePage.tsx": "React page component that renders a form for creating a new trade listing, with fields for display name, offered item, and requested item (supporting Roblox account or brainrot item types), including validation and submission via the useCreateListing mutation hook.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts (Nunito), OKLCH-based color tokens (neon, orange, surface, etc.), neon/orange box shadows, accordion animations, and plugins for typography, container queries, and animate.",
+  "project_state.json": "Project state metadata file tracking the Roblox-to-Brainrot trading website's implemented features (homepage listings, post-trade form, listing detail view, visual theme) and pending feature requests (backend data model and API for trade listings)."
+}

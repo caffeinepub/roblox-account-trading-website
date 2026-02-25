@@ -1,0 +1,91 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-that-displays-active-trade-listings-each-showing-a-roblox-account-offer-username-level-inventory-highlights-in-exchange-for-brainrot-content-items-or-vice-versa",
+      "featureTitle": "Create a homepage that displays active trade listings, each showing a Roblox account offer (username, level, inventory highlights) in exchange for Brainrot content items or vice versa.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TradeListingCard.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-post-a-trade-form-on-the-frontend-allowing-users-to-submit-a-new-listing-by-entering-their-display-name-what-they-are-offering-roblox-account-info-or-brainrot-item-description-and-what-they-want-in-return",
+      "featureTitle": "Add a 'Post a Trade' form on the frontend allowing users to submit a new listing by entering their display name, what they are offering (Roblox account info or Brainrot item description), and what they want in return.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ItemTypeSelector.tsx",
+        "frontend/src/components/Navigation.tsx",
+        "frontend/src/pages/PostTradePage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-listing-detail-view-where-users-can-see-the-full-details-of-a-trade-listing-and-mark-it-as-closed-completed",
+      "featureTitle": "Add a listing detail view where users can see the full details of a trade listing and mark it as closed/completed.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/TradeListingCard.tsx",
+        "frontend/src/pages/ListingDetailPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-bold-energetic-visual-theme-inspired-by-internet-meme-and-gaming-culture-bright-accent-colors-e-g-neon-green-or-vivid-orange-chunky-typography-dark-background-and-card-based-layout-apply-this-style-consistently-across-all-pages-and-components",
+      "featureTitle": "Apply a bold, energetic visual theme inspired by internet meme and gaming culture — bright accent colors (e.g., neon green or vivid orange), chunky typography, dark background, and card-based layout. Apply this style consistently across all pages and components.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

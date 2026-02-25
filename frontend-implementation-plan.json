@@ -1,0 +1,121 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Brainrot Trade Hub - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a homepage displaying active trade listings with Roblox account and Brainrot item details",
+      "acceptanceCriteria": [
+        "Homepage lists at least a sample set of trade listings",
+        "Each listing shows the offered Roblox account details and the requested Brainrot item",
+        "Listings are readable and visually distinct"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the main homepage component that fetches and displays active trade listings from the backend using getActiveListings(). Each listing card shows the poster's display name, offered item details (Roblox username/level/inventory or Brainrot description), requested item details, and creation timestamp. Style with card-based layout matching the energetic gaming/meme theme."
+        },
+        {
+          "path": "frontend/src/components/TradeListingCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable card component that displays a single trade listing. Show offered and requested item details with clear visual distinction between Roblox accounts (display username, level, inventory highlights) and Brainrot items (display description). Include poster display name and timestamp. Apply bold, chunky typography with neon accents on dark background."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the HomePage component as the default route at '/'. Set up React Router with routes for the homepage, post trade form, and listing detail views. Ensure navigation structure supports the trading platform flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add a 'Post a Trade' form allowing users to submit new listings with display name, offering details, and wanted items",
+      "acceptanceCriteria": [
+        "Form has fields for display name, offering description, and wanted description",
+        "Submitting the form creates a new listing visible on the homepage",
+        "Form validates that required fields are not empty before submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/PostTradePage.tsx",
+          "operation": "create",
+          "description": "Create a page with a form for posting new trade listings. Include fields for poster display name, offering type selector (Roblox Account or Brainrot Item), offering details (username/level/inventory for Roblox, description for Brainrot), requesting type selector, and requesting details. Validate all required fields before calling backend createListing(). On success, navigate to homepage. Apply the energetic theme with bright accent colors and chunky typography."
+        },
+        {
+          "path": "frontend/src/components/ItemTypeSelector.tsx",
+          "operation": "create",
+          "description": "Create a component that lets users choose between 'Roblox Account' and 'Brainrot Item' with radio buttons or tabs. When Roblox Account is selected, show fields for username, level, and inventory highlights. When Brainrot Item is selected, show a textarea for description. Style with bold borders and neon accents."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a route for '/post-trade' that renders the PostTradePage component. Add navigation link in the app header or navigation bar to access the post trade form from any page."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create a navigation component with links to the homepage and 'Post a Trade' page. Include the generated logo banner image at frontend/public/assets/generated/banner-logo.dim_1200x300.png in the header. Style with dark background and neon accent colors matching the theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add a listing detail view showing full trade details with ability to mark listings as closed",
+      "acceptanceCriteria": [
+        "Clicking a listing opens a detail view with all fields",
+        "A 'Mark as Completed' button sets the listing status to closed",
+        "Closed listings are visually differentiated from open ones"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ListingDetailPage.tsx",
+          "operation": "create",
+          "description": "Create a detail page that fetches a single listing using getListingDetails(id) from the backend. Display all fields including poster name, offered item full details, requested item full details, creation timestamp, and status. Show a 'Mark as Completed' button that calls closeListing(id) when clicked. Disable the button and show visual indication (opacity, strikethrough, or label) when status is already closed. Use chunky typography and bright accents."
+        },
+        {
+          "path": "frontend/src/components/TradeListingCard.tsx",
+          "operation": "modify",
+          "description": "Make the card clickable and navigate to '/listing/:id' when clicked. Show a visual badge or overlay (grayed out, 'CLOSED' label) when listing status is closed. Use router link or onClick handler to navigate to the detail page."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a route for '/listing/:id' that renders the ListingDetailPage component. Pass the listing ID as a URL parameter to fetch the correct listing details."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Apply a bold, energetic visual theme inspired by gaming and meme culture with bright accents, chunky typography, and dark background",
+      "acceptanceCriteria": [
+        "Color palette, typography, and layout are consistent across all pages",
+        "Theme clearly evokes gaming/meme culture",
+        "No blue or purple used as primary colors"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global CSS custom properties for the theme: dark background (#0a0a0a or similar), neon green primary (#00ff41 or similar), vivid orange secondary (#ff6b00 or similar), and white/light gray text. Set default font to a bold, chunky sans-serif (e.g., 'Inter', 'Poppins' with weight 700-900). Apply dark background to body and establish baseline typography scale. Integrate the generated brainrot-icon.dim_128x128.png from frontend/public/assets/generated/ as a favicon or branding element in the layout."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom colors matching the meme/gaming aesthetic: set primary to neon green, secondary to vivid orange, background to dark near-black, and ensure no blue or purple in the primary palette. Add chunky font family with high weights. Configure card shadows and border styles to reinforce bold, energetic look."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a layout wrapper component that includes the Navigation component and applies consistent dark background, padding, and max-width container for content. Use this layout to wrap all pages, ensuring the banner logo and navigation are visible on every page. Apply the theme colors and typography globally through this component."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all route components with the Layout component to ensure consistent theming, navigation, and branding across the entire application."
+        }
+      ]
+    }
+  ]
+}

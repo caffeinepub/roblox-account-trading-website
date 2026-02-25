@@ -1,0 +1,64 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T02:48:32.658Z",
+  "summary": "The implementation covers all five core requirements. The backend implements the full data model and CRUD API for trade listings. The frontend implements the homepage with listing cards, a Post a Trade form with validation, a listing detail page with a Mark as Completed button, and a bold gaming/meme theme with neon/orange accent colors. One notable gap is that the backend does not use stable variables or upgrade hooks, meaning listing state may not survive canister upgrades. The required images are referenced in the code but only one omitted file is noted in the diff, making it uncertain whether both images are present.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Listing state survives canister upgrades",
+      "reason": "The backend uses 'let listings = Map.empty<Nat, TradeListing>()' and 'var nextListingId = 0' without stable variable declarations or pre/post-upgrade hooks. Non-stable variables in Motoko are reset on canister upgrades, so listing state would be lost.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "getAllListings() backend endpoint returning all listings regardless of status",
+      "reason": "The build request only specified creating listings, retrieving active listings, and marking listings as closed. A separate getAllListings endpoint was added beyond the spec.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Tabbed interface on HomePage showing both Active and All Trades tabs",
+      "reason": "The build request only required displaying active trade listings on the homepage. A tabbed view with an All Trades tab was added beyond the specification.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx"
+      ]
+    },
+    {
+      "description": "Stats bar showing active trade count and completed trade count on the homepage",
+      "reason": "The build request did not request a statistics or metrics bar on the homepage.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.8,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/ItemTypeSelector.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/TradeListingCard.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/ListingDetailPage.tsx",
+    "frontend/src/pages/PostTradePage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

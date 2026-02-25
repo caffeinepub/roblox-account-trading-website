@@ -1,0 +1,106 @@
+{
+  "kind": "build_request",
+  "title": "Roblox Account Trading Platform for Brainrot Content",
+  "projectName": "Brainrot Trade Hub",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage that displays active trade listings, each showing a Roblox account offer (username, level, inventory highlights) in exchange for Brainrot content items or vice versa.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "trade roblox accounts for brianrot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage lists at least a sample set of trade listings",
+        "Each listing shows the offered Roblox account details and the requested Brainrot item",
+        "Listings are readable and visually distinct"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement a backend data model and API for trade listings. Each listing must store: listing ID, poster display name, offered item type (Roblox account or Brainrot item), offered item description, requested item type, requested item description, status (open/closed), and creation timestamp.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ],
+        "quotes": [
+          "trade roblox accounts for brianrot"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Listings can be created, retrieved, and marked as closed via backend calls",
+        "All fields are persisted correctly",
+        "Listing state survives canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add a 'Post a Trade' form on the frontend allowing users to submit a new listing by entering their display name, what they are offering (Roblox account info or Brainrot item description), and what they want in return.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form has fields for display name, offering description, and wanted description",
+        "Submitting the form creates a new listing visible on the homepage",
+        "Form validates that required fields are not empty before submission"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a listing detail view where users can see the full details of a trade listing and mark it as closed/completed.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking a listing opens a detail view with all fields",
+        "A 'Mark as Completed' button sets the listing status to closed",
+        "Closed listings are visually differentiated from open ones"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a bold, energetic visual theme inspired by internet meme and gaming culture — bright accent colors (e.g., neon green or vivid orange), chunky typography, dark background, and card-based layout. Apply this style consistently across all pages and components.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-last"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette, typography, and layout are consistent across all pages",
+        "Theme clearly evokes gaming/meme culture",
+        "No blue or purple used as primary colors"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not implement any account credential storage, login takeover, or any feature that facilitates unauthorized account access",
+    "Trade listings are informational only — the platform does not transfer accounts or handle authentication on behalf of any third-party service"
+  ],
+  "nonGoals": [
+    "Actual Roblox API integration or account verification",
+    "Real-time chat or messaging between traders",
+    "Payment processing",
+    "User authentication (Internet Identity or otherwise) in this initial build"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Bold meme-style banner logo with the text 'Brainrot Trade Hub' in chunky neon letters on a dark background with pixel/glitch art accents (banner-logo.dim_1200x300.png)",
+      "Small cartoon brain character icon with sunglasses, vibrant colors, meme aesthetic (brainrot-icon.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}
